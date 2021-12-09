@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="vijay.masai.meesho.firstPage">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:text="Vijay Kumar"
+                android:textStyle="bold"
+                app:drawableLeftCompat="@drawable/ic_baseline_account_circle_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/Like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:src="@drawable/ic_baseline_favorite_border_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/ivCart"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivCart"
+                android:layout_width="22dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/shopping_cart" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="384dp"
+        android:layout_height="wrap_content"
+        android:elevation="30dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <EditText
+            android:id="@+id/etSearchBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:layout_gravity="center"
+            android:hint="Search by Keyword or Product ID"
+            android:paddingHorizontal="50dp"
+            android:inputType="textPersonName"
+            android:textColor="#778899" />
+
+        <ImageView
+            android:id="@+id/imSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="41dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_baseline_search_24" />
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <HorizontalScrollView
+            android:id="@+id/firstHorizontalScroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/firstConstrain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/mobileImageCard"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="25dp"
+                    app:cardCornerRadius="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.285">
+
+                    <ImageView
+                        android:id="@+id/ivMobiles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/allcat" />
+
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/tvMobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="20dp"
+                    android:text="Categories"
+                    android:textColor="#778899"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/mobileImageCard"
+                    app:layout_constraintHorizontal_bias="0.45"
+                    app:layout_constraintStart_toStartOf="@+id/mobileImageCard"
+                    app:layout_constraintTop_toBottomOf="@id/mobileImageCard"
+                    app:layout_constraintVertical_bias="0.066" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvElectronics"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="25dp"
+                    app:cardCornerRadius="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.01"
+                    app:layout_constraintStart_toEndOf="@+id/mobileImageCard"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.323">
+
+
+                    <ImageView
+                        android:id="@+id/ivElectronics"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/s2" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvElectronics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:text="Saree"
+                    android:textColor="#778899"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/cvElectronics"
+                    app:layout_constraintStart_toStartOf="@+id/cvElectronics"
+                    app:layout_constraintTop_toBottomOf="@+id/cvElectronics"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvFashion"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="25dp"
+                    app:cardCornerRadius="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.01"
+                    app:layout_constraintStart_toEndOf="@+id/cvElectronics"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.253">
+
+                    <ImageView
+                        android:id="@+id/ivFashion"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/kurti" />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvFashion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:text="Kurti Sets"
+                    android:textColor="#778899"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/cvFashion"
+                    app:layout_constraintStart_toStartOf="@+id/cvFashion"
+                    app:layout_constraintTop_toBottomOf="@+id/cvFashion"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvHomeAndKitchen"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="25dp"
+                    app:cardCornerRadius="50dp"
+                    app:layout_constraintBottom_toBottomOf="@id/firstConstrain"
+                    app:layout_constraintEnd_toEndOf="@+id/firstConstrain"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/cvFashion"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.253">
+
+                    <ImageView
+                        android:id="@+id/ivHomeAndKitchen"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/westwear" />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvHomeAndKitchen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:text="Westernwear"
+
+                    android:textColor="#778899"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/cvHomeAndKitchen"
+                    app:layout_constraintStart_toStartOf="@+id/cvHomeAndKitchen"
+                    app:layout_constraintTop_toBottomOf="@+id/cvHomeAndKitchen"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvApplicationRange"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="25dp"
+                    app:cardCornerRadius="50dp"
+                    app:layout_constraintBottom_toBottomOf="@id/firstConstrain"
+                    app:layout_constraintEnd_toEndOf="@+id/firstConstrain"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/cvHomeAndKitchen"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.253">
+
+                    <ImageView
+                        android:id="@+id/ivApplicationRange"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/s1" />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvApplicationRange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:text="Men"
+                    android:textColor="#778899"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/cvApplicationRange"
+                    app:layout_constraintStart_toStartOf="@+id/cvApplicationRange"
+                    app:layout_constraintTop_toBottomOf="@+id/cvApplicationRange"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </HorizontalScrollView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="310dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/adv" />
+
+        <TextView
+            android:id="@+id/best"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:paddingLeft="20sp"
+            android:text="Best Seller"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="220dp"
+                    android:src="@drawable/d9"
+                    android:scaleType="fitXY"/>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="220dp"
+                    android:src="@drawable/d11"
+                    android:scaleType="fitXY"/>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="220dp"
+                    android:src="@drawable/d10"
+                    android:scaleType="fitXY"/>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="220dp"
+                    android:src="@drawable/d8"
+                    android:scaleType="fitXY"/>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="220dp"
+                    android:src="@drawable/d7"
+                    android:scaleType="fitXY"/>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="220dp"
+                    android:src="@drawable/d7"
+                    android:scaleType="fitXY"/>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="220dp"
+                    android:src="@drawable/d6"
+                    android:scaleType="fitXY"/>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="220dp"
+                    android:src="@drawable/d5"
+                    android:scaleType="fitXY"/>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="220dp"
+                    android:src="@drawable/d4"
+                    android:scaleType="fitXY"/>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="220dp"
+                    android:src="@drawable/d3"
+                    android:scaleType="fitXY"/>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="220dp"
+                    android:src="@drawable/d2"
+                    android:scaleType="fitXY"/>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="220dp"
+                    android:src="@drawable/d1"
+                    android:scaleType="fitXY"/>
+            </LinearLayout>
+
+
+             </HorizontalScrollView>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:src="@drawable/advv"
+            android:scaleType="fitXY"/>
+
+           </LinearLayout>
+        </ScrollView>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

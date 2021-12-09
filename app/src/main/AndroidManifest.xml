@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="vijay.masai.meesho">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/s4"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/s4"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <activity
+            android:name="vijay.masai.meesho.Order"
+            android:exported="true" />
+        <activity
+            android:name="vijay.masai.meesho.Sign_up"
+            android:exported="true" />
+        <activity
+            android:name="vijay.masai.meesho.Login"
+            android:exported="true" />
+        <activity
+            android:name="vijay.masai.meesho.View_Devices"
+            android:exported="true" />
+        <activity
+            android:name="vijay.masai.meesho.MyOrdersActivity"
+            android:exported="true" />
+        <activity
+            android:name="vijay.masai.meesho.Product_Viewer"
+            android:exported="true" />
+        <activity
+            android:name="vijay.masai.meesho.firstPage"
+            android:exported="true" />
+        <activity
+            android:name="vijay.masai.meesho.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
